@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: hsl(216, 12%, 8%);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Rating Component */
+.rating__wrapper {
+    min-height: 25rem;
+    max-width: 25rem;
+    margin: 0 1rem;
+    padding: 2rem;
+    border-radius: 25px;
+    background: linear-gradient(210deg, hsl(213, 19%, 19%) 0%, hsl(213, 19%, 18%) 100%);
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+    padding: 1.25rem;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+    background: hsl(213, 19%, 22%);
+}
+
+.icon svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-bottom: .75rem;
+}
+
+p {
+    color: hsl(217, 12%, 63%);
+    line-height: 25px;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.rating__buttons {
+    display: flex; 
+    justify-content: space-between;
+    margin: 1.75rem 0;
+}
+
+.rating__buttons button {
+    font-weight: 700;
+    font-size: 1rem;
+    color: hsl(217, 12%, 63%);
+    background: hsl(213, 19%, 22%);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    padding: 1.25rem;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s ease-in-out;
+}
+
+.rating__buttons button:hover {
+    background: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
+}
+
+.rating__buttons button:active,
+.rating__buttons button:focus {
+    background: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+button[type="submit"] {
+    width: 100%;
+    border: 0;
+    border-radius: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 3px;
+    padding: 1rem 0;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    background: hsl(25, 97%, 53%);
+    transition: .25s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+
+/* Thank you */
+.rating__thankyou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating__callout,
+.rating__text {
+    text-align: center;
+}
+
+.rating__callout {
+    margin: 2rem 0;
+    background: hsl(213, 19%, 22%);
+    padding: .5rem 1rem;
+    border-radius: 35px;
+    color: hsl(25, 97%, 53%);
+}
+
+.fade-in {
+    animation: .25s fade-in forwards;
+}
+
+.fade-out {
+    animation: .25s fade-out forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
